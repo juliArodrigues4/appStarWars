@@ -21,8 +21,8 @@ export default function App() {
       numColumns={2}
       renderItem={({item}) =>
       <View style={styles.cont}>
-        <Text>Nome: {item.name} {'\n'}</Text> 
-        <Text>Cor dos olhos: {item.eye_color}</Text>
+        <Text style={styles.texto}>Nome: {item.name} {'\n'}</Text> 
+        <Text style={styles.texto}>Cor dos olhos: {item.eye_color}</Text>
       </View>
     }
       />
@@ -40,7 +40,6 @@ const styles = StyleSheet.create({
   },
   cont:{
     backgroundColor: '#a50800',
-    flex: 1,
     marginBottom: 10,
     marginRight: 10,
     paddingRight: 20,
@@ -52,9 +51,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingVertical: 10,
     borderRadius: 18,
+    width: 180,
+    marginTop: 5,
+
   },
   title: {
     textAlign: 'center',
     fontSize: 27,
+    marginBottom: 70,
+    marginTop: 40,
+    fontWeight: 'bold',
+  },
+  texto: {
+    color: '#fff',
   }
+  
 });
